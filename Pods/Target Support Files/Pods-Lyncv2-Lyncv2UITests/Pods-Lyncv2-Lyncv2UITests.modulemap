@@ -1,0 +1,6 @@
+framework module Pods_Lyncv2_Lyncv2UITests {
+  umbrella header "Pods-Lyncv2-Lyncv2UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

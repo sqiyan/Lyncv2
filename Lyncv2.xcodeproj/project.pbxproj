@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		266708B523F14E4300333877 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 266708B423F14E4300333877 /* Comfortaa-Light.ttf */; };
+		26D3296024037F95000FCF3F /* Lyncv2 in Resources */ = {isa = PBXBuildFile; fileRef = 26D3295F24037F95000FCF3F /* Lyncv2 */; };
+		26D3296124037F95000FCF3F /* Lyncv2 in Resources */ = {isa = PBXBuildFile; fileRef = 26D3295F24037F95000FCF3F /* Lyncv2 */; };
+		26D3296224037F95000FCF3F /* Lyncv2 in Resources */ = {isa = PBXBuildFile; fileRef = 26D3295F24037F95000FCF3F /* Lyncv2 */; };
+		26D3296424037FB2000FCF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D3296324037FB1000FCF3F /* GoogleService-Info.plist */; };
+		26D3296524037FB2000FCF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D3296324037FB1000FCF3F /* GoogleService-Info.plist */; };
+		26D3296624037FB2000FCF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D3296324037FB1000FCF3F /* GoogleService-Info.plist */; };
+		26E7598423BF223100A3E7F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7598323BF223100A3E7F5 /* AppDelegate.swift */; };
+		26E7598623BF223100A3E7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7598523BF223100A3E7F5 /* ViewController.swift */; };
+		26E7598923BF223100A3E7F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E7598723BF223100A3E7F5 /* Main.storyboard */; };
+		26E7598B23BF223200A3E7F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E7598A23BF223200A3E7F5 /* Assets.xcassets */; };
+		26E7598E23BF223200A3E7F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E7598C23BF223200A3E7F5 /* LaunchScreen.storyboard */; };
+		26E7599923BF223200A3E7F5 /* Lyncv2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7599823BF223200A3E7F5 /* Lyncv2Tests.swift */; };
+		26E759A423BF223200A3E7F5 /* Lyncv2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E759A323BF223200A3E7F5 /* Lyncv2UITests.swift */; };
+		26E8C30B23F1706C00F8126A /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8C30A23F1706C00F8126A /* HomePageViewController.swift */; };
+		26E8C30D23F198D600F8126A /* PersonalityTestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8C30C23F198D600F8126A /* PersonalityTestStoryboard.storyboard */; };
+		26E8C30F23F1990700F8126A /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8C30E23F1990700F8126A /* Games.storyboard */; };
+		26E8C31123F1991F00F8126A /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8C31023F1991F00F8126A /* Matches.storyboard */; };
+		26E8C31323F199BC00F8126A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8C31223F199BC00F8126A /* Profile.storyboard */; };
+		26E8C31723F1A5E500F8126A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8C31623F1A5E500F8126A /* ProfileViewController.swift */; };
+		97F6AC6DE91D5A459A2F61DB /* Pods_Lyncv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5493065CCCCD98E557D3E26 /* Pods_Lyncv2.framework */; };
+		DB7F2845F8D7861217722A28 /* Pods_Lyncv2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D680C48C59E1A4ED1DE118 /* Pods_Lyncv2Tests.framework */; };
+		F6FE1906AB3863BC9488562A /* Pods_Lyncv2_Lyncv2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E5A253344F23286529152 /* Pods_Lyncv2_Lyncv2UITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26E7599523BF223200A3E7F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26E7597823BF223100A3E7F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26E7597F23BF223100A3E7F5;
+			remoteInfo = Lyncv2;
+		};
+		26E759A023BF223200A3E7F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26E7597823BF223100A3E7F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26E7597F23BF223100A3E7F5;
+			remoteInfo = Lyncv2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F692F84B1975E7DD3849613 /* Pods-Lyncv2-Lyncv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyncv2-Lyncv2UITests.release.xcconfig"; path = "Target Support Files/Pods-Lyncv2-Lyncv2UITests/Pods-Lyncv2-Lyncv2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		266708B423F14E4300333877 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		26D3295F24037F95000FCF3F /* Lyncv2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lyncv2; sourceTree = "<group>"; };
+		26D3296324037FB1000FCF3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		26E7598023BF223100A3E7F5 /* Lyncv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyncv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E7598323BF223100A3E7F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26E7598523BF223100A3E7F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26E7598823BF223100A3E7F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26E7598A23BF223200A3E7F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26E7598D23BF223200A3E7F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26E7598F23BF223200A3E7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E7599423BF223200A3E7F5 /* Lyncv2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lyncv2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E7599823BF223200A3E7F5 /* Lyncv2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyncv2Tests.swift; sourceTree = "<group>"; };
+		26E7599A23BF223200A3E7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E7599F23BF223200A3E7F5 /* Lyncv2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lyncv2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E759A323BF223200A3E7F5 /* Lyncv2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyncv2UITests.swift; sourceTree = "<group>"; };
+		26E759A523BF223200A3E7F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E8C30A23F1706C00F8126A /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		26E8C30C23F198D600F8126A /* PersonalityTestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalityTestStoryboard.storyboard; sourceTree = "<group>"; };
+		26E8C30E23F1990700F8126A /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
+		26E8C31023F1991F00F8126A /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
+		26E8C31223F199BC00F8126A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		26E8C31623F1A5E500F8126A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		465FE22C2B06F68E7497151B /* Pods-Lyncv2-Lyncv2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyncv2-Lyncv2UITests.debug.xcconfig"; path = "Target Support Files/Pods-Lyncv2-Lyncv2UITests/Pods-Lyncv2-Lyncv2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		575E5A253344F23286529152 /* Pods_Lyncv2_Lyncv2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyncv2_Lyncv2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D680C48C59E1A4ED1DE118 /* Pods_Lyncv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyncv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B304D433385362F23946F71 /* Pods-Lyncv2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyncv2.debug.xcconfig"; path = "Target Support Files/Pods-Lyncv2/Pods-Lyncv2.debug.xcconfig"; sourceTree = "<group>"; };
+		9FFB82F1FDC7625F38F0A174 /* Pods-Lyncv2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyncv2.release.xcconfig"; path = "Target Support Files/Pods-Lyncv2/Pods-Lyncv2.release.xcconfig"; sourceTree = "<group>"; };
+		B5493065CCCCD98E557D3E26 /* Pods_Lyncv2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyncv2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48B1BAE71C7D6CE1E4B1039 /* Pods-Lyncv2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyncv2Tests.release.xcconfig"; path = "Target Support Files/Pods-Lyncv2Tests/Pods-Lyncv2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D79A0BDDB61A2AF5E1811C02 /* Pods-Lyncv2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyncv2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Lyncv2Tests/Pods-Lyncv2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26E7597D23BF223100A3E7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97F6AC6DE91D5A459A2F61DB /* Pods_Lyncv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7599123BF223200A3E7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB7F2845F8D7861217722A28 /* Pods_Lyncv2Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7599C23BF223200A3E7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6FE1906AB3863BC9488562A /* Pods_Lyncv2_Lyncv2UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09DF481FBF454B26918A436F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5493065CCCCD98E557D3E26 /* Pods_Lyncv2.framework */,
+				575E5A253344F23286529152 /* Pods_Lyncv2_Lyncv2UITests.framework */,
+				69D680C48C59E1A4ED1DE118 /* Pods_Lyncv2Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		266708B123F14D5D00333877 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				266708B423F14E4300333877 /* Comfortaa-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		26E7597723BF223100A3E7F5 = {
+			isa = PBXGroup;
+			children = (
+				26E7598223BF223100A3E7F5 /* Lyncv2 */,
+				26D3295F24037F95000FCF3F /* Lyncv2 */,
+				26E7599723BF223200A3E7F5 /* Lyncv2Tests */,
+				26E759A223BF223200A3E7F5 /* Lyncv2UITests */,
+				26E7598123BF223100A3E7F5 /* Products */,
+				FA15196C9B5117A44889C86F /* Pods */,
+				09DF481FBF454B26918A436F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		26E7598123BF223100A3E7F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26E7598023BF223100A3E7F5 /* Lyncv2.app */,
+				26E7599423BF223200A3E7F5 /* Lyncv2Tests.xctest */,
+				26E7599F23BF223200A3E7F5 /* Lyncv2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26E7598223BF223100A3E7F5 /* Lyncv2 */ = {
+			isa = PBXGroup;
+			children = (
+				26D3296324037FB1000FCF3F /* GoogleService-Info.plist */,
+				266708B123F14D5D00333877 /* Fonts */,
+				26E7598323BF223100A3E7F5 /* AppDelegate.swift */,
+				26E7598523BF223100A3E7F5 /* ViewController.swift */,
+				26E8C30A23F1706C00F8126A /* HomePageViewController.swift */,
+				26E8C30C23F198D600F8126A /* PersonalityTestStoryboard.storyboard */,
+				26E8C30E23F1990700F8126A /* Games.storyboard */,
+				26E8C31023F1991F00F8126A /* Matches.storyboard */,
+				26E7598723BF223100A3E7F5 /* Main.storyboard */,
+				26E8C31223F199BC00F8126A /* Profile.storyboard */,
+				26E8C31623F1A5E500F8126A /* ProfileViewController.swift */,
+				26E7598A23BF223200A3E7F5 /* Assets.xcassets */,
+				26E7598C23BF223200A3E7F5 /* LaunchScreen.storyboard */,
+				26E7598F23BF223200A3E7F5 /* Info.plist */,
+			);
+			path = Lyncv2;
+			sourceTree = "<group>";
+		};
+		26E7599723BF223200A3E7F5 /* Lyncv2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				26E7599823BF223200A3E7F5 /* Lyncv2Tests.swift */,
+				26E7599A23BF223200A3E7F5 /* Info.plist */,
+			);
+			path = Lyncv2Tests;
+			sourceTree = "<group>";
+		};
+		26E759A223BF223200A3E7F5 /* Lyncv2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				26E759A323BF223200A3E7F5 /* Lyncv2UITests.swift */,
+				26E759A523BF223200A3E7F5 /* Info.plist */,
+			);
+			path = Lyncv2UITests;
+			sourceTree = "<group>";
+		};
+		FA15196C9B5117A44889C86F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B304D433385362F23946F71 /* Pods-Lyncv2.debug.xcconfig */,
+				9FFB82F1FDC7625F38F0A174 /* Pods-Lyncv2.release.xcconfig */,
+				465FE22C2B06F68E7497151B /* Pods-Lyncv2-Lyncv2UITests.debug.xcconfig */,
+				0F692F84B1975E7DD3849613 /* Pods-Lyncv2-Lyncv2UITests.release.xcconfig */,
+				D79A0BDDB61A2AF5E1811C02 /* Pods-Lyncv2Tests.debug.xcconfig */,
+				C48B1BAE71C7D6CE1E4B1039 /* Pods-Lyncv2Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26E7597F23BF223100A3E7F5 /* Lyncv2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26E759A823BF223200A3E7F5 /* Build configuration list for PBXNativeTarget "Lyncv2" */;
+			buildPhases = (
+				9BDF0EBF5C70BA69AF2934EA /* [CP] Check Pods Manifest.lock */,
+				26E7597C23BF223100A3E7F5 /* Sources */,
+				26E7597D23BF223100A3E7F5 /* Frameworks */,
+				26E7597E23BF223100A3E7F5 /* Resources */,
+				8BEAEDDBB294DB9B49317B91 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lyncv2;
+			productName = Lyncv2;
+			productReference = 26E7598023BF223100A3E7F5 /* Lyncv2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26E7599323BF223200A3E7F5 /* Lyncv2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26E759AB23BF223200A3E7F5 /* Build configuration list for PBXNativeTarget "Lyncv2Tests" */;
+			buildPhases = (
+				82F791D8FCDE073DFB3436E3 /* [CP] Check Pods Manifest.lock */,
+				26E7599023BF223200A3E7F5 /* Sources */,
+				26E7599123BF223200A3E7F5 /* Frameworks */,
+				26E7599223BF223200A3E7F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26E7599623BF223200A3E7F5 /* PBXTargetDependency */,
+			);
+			name = Lyncv2Tests;
+			productName = Lyncv2Tests;
+			productReference = 26E7599423BF223200A3E7F5 /* Lyncv2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26E7599E23BF223200A3E7F5 /* Lyncv2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26E759AE23BF223200A3E7F5 /* Build configuration list for PBXNativeTarget "Lyncv2UITests" */;
+			buildPhases = (
+				C21EDFADC2E1B85EFBC8A19F /* [CP] Check Pods Manifest.lock */,
+				26E7599B23BF223200A3E7F5 /* Sources */,
+				26E7599C23BF223200A3E7F5 /* Frameworks */,
+				26E7599D23BF223200A3E7F5 /* Resources */,
+				315363F863C5CD69FBE48BCA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26E759A123BF223200A3E7F5 /* PBXTargetDependency */,
+			);
+			name = Lyncv2UITests;
+			productName = Lyncv2UITests;
+			productReference = 26E7599F23BF223200A3E7F5 /* Lyncv2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26E7597823BF223100A3E7F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Seah Qi Yan";
+				TargetAttributes = {
+					26E7597F23BF223100A3E7F5 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					26E7599323BF223200A3E7F5 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 26E7597F23BF223100A3E7F5;
+					};
+					26E7599E23BF223200A3E7F5 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 26E7597F23BF223100A3E7F5;
+					};
+				};
+			};
+			buildConfigurationList = 26E7597B23BF223100A3E7F5 /* Build configuration list for PBXProject "Lyncv2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26E7597723BF223100A3E7F5;
+			productRefGroup = 26E7598123BF223100A3E7F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26E7597F23BF223100A3E7F5 /* Lyncv2 */,
+				26E7599323BF223200A3E7F5 /* Lyncv2Tests */,
+				26E7599E23BF223200A3E7F5 /* Lyncv2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26E7597E23BF223100A3E7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26E8C30F23F1990700F8126A /* Games.storyboard in Resources */,
+				26D3296024037F95000FCF3F /* Lyncv2 in Resources */,
+				266708B523F14E4300333877 /* Comfortaa-Light.ttf in Resources */,
+				26E8C31323F199BC00F8126A /* Profile.storyboard in Resources */,
+				26E7598E23BF223200A3E7F5 /* LaunchScreen.storyboard in Resources */,
+				26E7598B23BF223200A3E7F5 /* Assets.xcassets in Resources */,
+				26E8C30D23F198D600F8126A /* PersonalityTestStoryboard.storyboard in Resources */,
+				26D3296424037FB2000FCF3F /* GoogleService-Info.plist in Resources */,
+				26E7598923BF223100A3E7F5 /* Main.storyboard in Resources */,
+				26E8C31123F1991F00F8126A /* Matches.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7599223BF223200A3E7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D3296124037F95000FCF3F /* Lyncv2 in Resources */,
+				26D3296524037FB2000FCF3F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7599D23BF223200A3E7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D3296224037F95000FCF3F /* Lyncv2 in Resources */,
+				26D3296624037FB2000FCF3F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		315363F863C5CD69FBE48BCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lyncv2-Lyncv2UITests/Pods-Lyncv2-Lyncv2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lyncv2-Lyncv2UITests/Pods-Lyncv2-Lyncv2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lyncv2-Lyncv2UITests/Pods-Lyncv2-Lyncv2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82F791D8FCDE073DFB3436E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lyncv2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BEAEDDBB294DB9B49317B91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lyncv2/Pods-Lyncv2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lyncv2/Pods-Lyncv2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lyncv2/Pods-Lyncv2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BDF0EBF5C70BA69AF2934EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lyncv2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C21EDFADC2E1B85EFBC8A19F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lyncv2-Lyncv2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26E7597C23BF223100A3E7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26E7598623BF223100A3E7F5 /* ViewController.swift in Sources */,
+				26E7598423BF223100A3E7F5 /* AppDelegate.swift in Sources */,
+				26E8C31723F1A5E500F8126A /* ProfileViewController.swift in Sources */,
+				26E8C30B23F1706C00F8126A /* HomePageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7599023BF223200A3E7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26E7599923BF223200A3E7F5 /* Lyncv2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7599B23BF223200A3E7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26E759A423BF223200A3E7F5 /* Lyncv2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26E7599623BF223200A3E7F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26E7597F23BF223100A3E7F5 /* Lyncv2 */;
+			targetProxy = 26E7599523BF223200A3E7F5 /* PBXContainerItemProxy */;
+		};
+		26E759A123BF223200A3E7F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26E7597F23BF223100A3E7F5 /* Lyncv2 */;
+			targetProxy = 26E759A023BF223200A3E7F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26E7598723BF223100A3E7F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26E7598823BF223100A3E7F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26E7598C23BF223200A3E7F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26E7598D23BF223200A3E7F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26E759A623BF223200A3E7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		26E759A723BF223200A3E7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26E759A923BF223200A3E7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B304D433385362F23946F71 /* Pods-Lyncv2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFU5557K9U;
+				INFOPLIST_FILE = Lyncv2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26E759AA23BF223200A3E7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FFB82F1FDC7625F38F0A174 /* Pods-Lyncv2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFU5557K9U;
+				INFOPLIST_FILE = Lyncv2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		26E759AC23BF223200A3E7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D79A0BDDB61A2AF5E1811C02 /* Pods-Lyncv2Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFU5557K9U;
+				INFOPLIST_FILE = Lyncv2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyncv2.app/Lyncv2";
+			};
+			name = Debug;
+		};
+		26E759AD23BF223200A3E7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C48B1BAE71C7D6CE1E4B1039 /* Pods-Lyncv2Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFU5557K9U;
+				INFOPLIST_FILE = Lyncv2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyncv2.app/Lyncv2";
+			};
+			name = Release;
+		};
+		26E759AF23BF223200A3E7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 465FE22C2B06F68E7497151B /* Pods-Lyncv2-Lyncv2UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFU5557K9U;
+				INFOPLIST_FILE = Lyncv2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lyncv2;
+			};
+			name = Debug;
+		};
+		26E759B023BF223200A3E7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F692F84B1975E7DD3849613 /* Pods-Lyncv2-Lyncv2UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFU5557K9U;
+				INFOPLIST_FILE = Lyncv2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lyncv2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26E7597B23BF223100A3E7F5 /* Build configuration list for PBXProject "Lyncv2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E759A623BF223200A3E7F5 /* Debug */,
+				26E759A723BF223200A3E7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26E759A823BF223200A3E7F5 /* Build configuration list for PBXNativeTarget "Lyncv2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E759A923BF223200A3E7F5 /* Debug */,
+				26E759AA23BF223200A3E7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26E759AB23BF223200A3E7F5 /* Build configuration list for PBXNativeTarget "Lyncv2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E759AC23BF223200A3E7F5 /* Debug */,
+				26E759AD23BF223200A3E7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26E759AE23BF223200A3E7F5 /* Build configuration list for PBXNativeTarget "Lyncv2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26E759AF23BF223200A3E7F5 /* Debug */,
+				26E759B023BF223200A3E7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26E7597823BF223100A3E7F5 /* Project object */;
+}

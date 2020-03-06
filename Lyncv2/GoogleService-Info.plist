@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>979142733096-falqf1prestngculm5cr4hdsock530jj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.979142733096-falqf1prestngculm5cr4hdsock530jj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAgfF5sFczBj3sA7tCaSHpuNyNFSLK7Vjw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>979142733096</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sqiyan.Lyncv2</string>
+	<key>PROJECT_ID</key>
+	<string>lync-quiz</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lync-quiz.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:979142733096:ios:c83ebba6881bf2477ff41d</string>
+	<key>DATABASE_URL</key>
+	<string>https://lync-quiz.firebaseio.com</string>
+</dict>
+</plist>
