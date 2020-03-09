@@ -18,7 +18,6 @@
 
 #include <cstdlib>
 #include <limits>
-#include <memory>
 #include <string>
 #include <utility>
 
@@ -41,7 +40,7 @@ namespace local {
 
 namespace {
 
-using core::Target;
+using core::Query;
 using model::Document;
 using model::DocumentState;
 using model::FieldValue;
@@ -59,6 +58,7 @@ using nanopb::Message;
 using nanopb::Reader;
 using nanopb::SafeReadBoolean;
 using nanopb::Writer;
+using remote::InvalidQuery;
 using util::Status;
 using util::StringFormat;
 
@@ -214,40 +214,38 @@ UnknownDocument LocalSerializer::DecodeUnknownDocument(
                          version);
 }
 
-Message<firestore_client_Target> LocalSerializer::EncodeTargetData(
-    const TargetData& target_data) const {
-  HARD_ASSERT(target_data.purpose() == QueryPurpose::Listen,
+Message<firestore_client_Target> LocalSerializer::EncodeQueryData(
+    const QueryData& query_data) const {
+  HARD_ASSERT(query_data.purpose() == QueryPurpose::Listen,
               "Only queries with purpose %s may be stored, got %s",
-              QueryPurpose::Listen, target_data.purpose());
+              QueryPurpose::Listen, query_data.purpose());
 
   Message<firestore_client_Target> result;
 
-  result->target_id = target_data.target_id();
-  result->last_listen_sequence_number = target_data.sequence_number();
+  result->target_id = query_data.target_id();
+  result->last_listen_sequence_number = query_data.sequence_number();
   result->snapshot_version = rpc_serializer_.EncodeTimestamp(
-      target_data.snapshot_version().timestamp());
-  result->last_limbo_free_snapshot_version = rpc_serializer_.EncodeTimestamp(
-      target_data.last_limbo_free_snapshot_version().timestamp());
+      query_data.snapshot_version().timestamp());
 
   // Force a copy because pb_release would otherwise double-free.
   result->resume_token =
-      nanopb::CopyBytesArray(target_data.resume_token().get());
+      nanopb::CopyBytesArray(query_data.resume_token().get());
 
-  const Target& target = target_data.target();
-  if (target.IsDocumentQuery()) {
+  const Query& query = query_data.query();
+  if (query.IsDocumentQuery()) {
     result->which_target_type = firestore_client_Target_documents_tag;
-    result->documents = rpc_serializer_.EncodeDocumentsTarget(target);
+    result->documents = rpc_serializer_.EncodeDocumentsTarget(query);
   } else {
     result->which_target_type = firestore_client_Target_query_tag;
-    result->query = rpc_serializer_.EncodeQueryTarget(target);
+    result->query = rpc_serializer_.EncodeQueryTarget(query);
   }
 
   return result;
 }
 
-TargetData LocalSerializer::DecodeTargetData(
+QueryData LocalSerializer::DecodeQueryData(
     Reader* reader, const firestore_client_Target& proto) const {
-  if (!reader->status().ok()) return TargetData();
+  if (!reader->status().ok()) return QueryData::Invalid();
 
   model::TargetId target_id = proto.target_id;
   model::ListenSequenceNumber sequence_number =
@@ -255,19 +253,16 @@ TargetData LocalSerializer::DecodeTargetData(
           proto.last_listen_sequence_number);
   SnapshotVersion version =
       rpc_serializer_.DecodeVersion(reader, proto.snapshot_version);
-  SnapshotVersion last_limbo_free_snapshot_version =
-      rpc_serializer_.DecodeVersion(reader,
-                                    proto.last_limbo_free_snapshot_version);
   ByteString resume_token(proto.resume_token);
-  Target target;
+  Query query = InvalidQuery();
 
   switch (proto.which_target_type) {
     case firestore_client_Target_query_tag:
-      target = rpc_serializer_.DecodeQueryTarget(reader, proto.query);
+      query = rpc_serializer_.DecodeQueryTarget(reader, proto.query);
       break;
 
     case firestore_client_Target_documents_tag:
-      target = rpc_serializer_.DecodeDocumentsTarget(reader, proto.documents);
+      query = rpc_serializer_.DecodeDocumentsTarget(reader, proto.documents);
       break;
 
     default:
@@ -275,10 +270,9 @@ TargetData LocalSerializer::DecodeTargetData(
           StringFormat("Unknown target_type: %s", proto.which_target_type));
   }
 
-  if (!reader->status().ok()) return TargetData();
-  return TargetData(std::move(target), target_id, sequence_number,
-                    QueryPurpose::Listen, version,
-                    last_limbo_free_snapshot_version, std::move(resume_token));
+  if (!reader->status().ok()) return QueryData::Invalid();
+  return QueryData(std::move(query), target_id, sequence_number,
+                   QueryPurpose::Listen, version, std::move(resume_token));
 }
 
 Message<firestore_client_WriteBatch> LocalSerializer::EncodeMutationBatch(

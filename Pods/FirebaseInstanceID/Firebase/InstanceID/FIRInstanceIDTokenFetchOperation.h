@@ -28,7 +28,7 @@ FOUNDATION_EXPORT NSString *const kFIRInstanceIDFirebaseHeartbeatKey;
                                    scope:(NSString *)scope
                                  options:(nullable NSDictionary<NSString *, NSString *> *)options
                       checkinPreferences:(FIRInstanceIDCheckinPreferences *)checkinPreferences
-                              instanceID:(NSString *)instanceID;
+                                 keyPair:(FIRInstanceIDKeyPair *)keyPair;
 
 @end
 NS_ASSUME_NONNULL_END

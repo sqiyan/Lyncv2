@@ -31,7 +31,6 @@
 #include "Firestore/Protos/nanopb/google/firestore/v1/firestore.nanopb.h"
 #include "Firestore/core/include/firebase/firestore/firestore_errors.h"
 #include "Firestore/core/include/firebase/firestore/timestamp.h"
-#include "Firestore/core/src/firebase/firestore/core/query.h"
 #include "Firestore/core/src/firebase/firestore/model/delete_mutation.h"
 #include "Firestore/core/src/firebase/firestore/model/document.h"
 #include "Firestore/core/src/firebase/firestore/model/field_path.h"
@@ -41,7 +40,7 @@
 #include "Firestore/core/src/firebase/firestore/model/resource_path.h"
 #include "Firestore/core/src/firebase/firestore/model/set_mutation.h"
 #include "Firestore/core/src/firebase/firestore/model/transform_mutation.h"
-#include "Firestore/core/src/firebase/firestore/model/verify_mutation.h"
+#include "Firestore/core/src/firebase/firestore/model/transform_operation.h"
 #include "Firestore/core/src/firebase/firestore/nanopb/byte_string.h"
 #include "Firestore/core/src/firebase/firestore/nanopb/nanopb_util.h"
 #include "Firestore/core/src/firebase/firestore/nanopb/reader.h"
@@ -61,13 +60,11 @@ using core::Direction;
 using core::FieldFilter;
 using core::Filter;
 using core::FilterList;
-using core::LimitType;
 using core::OrderBy;
 using core::OrderByList;
 using core::Query;
-using core::Target;
+using local::QueryData;
 using local::QueryPurpose;
-using local::TargetData;
 using model::ArrayTransform;
 using model::DatabaseId;
 using model::DeleteMutation;
@@ -93,7 +90,6 @@ using model::SnapshotVersion;
 using model::TargetId;
 using model::TransformMutation;
 using model::TransformOperation;
-using model::VerifyMutation;
 using nanopb::ByteString;
 using nanopb::CheckedSize;
 using nanopb::MakeArray;
@@ -156,6 +152,10 @@ Filter InvalidFilter() {
 }
 
 }  // namespace
+
+Query InvalidQuery() {
+  return Query();
+}
 
 Serializer::Serializer(DatabaseId database_id)
     : database_id_(std::move(database_id)) {
@@ -451,7 +451,7 @@ ResourcePath Serializer::DecodeQueryPath(Reader* reader,
     // In v1beta1 queries for collections at the root did not have a trailing
     // "/documents". In v1 all resource paths contain "/documents". Preserve the
     // ability to read the v1beta1 form for compatibility with queries persisted
-    // in the local target cache.
+    // in the local query cache.
     return ResourcePath::Empty();
   } else {
     return ExtractLocalPathFromResourceName(reader, resource);
@@ -632,12 +632,6 @@ google_firestore_v1_Write Serializer::EncodeMutation(
       result.delete_ = EncodeKey(mutation.key());
       return result;
     }
-
-    case Mutation::Type::Verify: {
-      result.which_operation = google_firestore_v1_Write_verify_tag;
-      result.verify = EncodeKey(mutation.key());
-      return result;
-    }
   }
 
   UNREACHABLE();
@@ -682,11 +676,6 @@ Mutation Serializer::DecodeMutation(
 
       return TransformMutation(DecodeKey(reader, mutation.transform.document),
                                field_transforms);
-    }
-
-    case google_firestore_v1_Write_verify_tag: {
-      return VerifyMutation(DecodeKey(reader, mutation.verify),
-                            std::move(precondition));
     }
 
     default:
@@ -864,55 +853,55 @@ FieldTransform Serializer::DecodeFieldTransform(
 }
 
 google_firestore_v1_Target Serializer::EncodeTarget(
-    const TargetData& target_data) const {
+    const QueryData& query_data) const {
   google_firestore_v1_Target result{};
-  const Target& target = target_data.target();
+  const Query& query = query_data.query();
 
-  if (target.IsDocumentQuery()) {
+  if (query.IsDocumentQuery()) {
     result.which_target_type = google_firestore_v1_Target_documents_tag;
-    result.target_type.documents = EncodeDocumentsTarget(target);
+    result.target_type.documents = EncodeDocumentsTarget(query);
   } else {
     result.which_target_type = google_firestore_v1_Target_query_tag;
-    result.target_type.query = EncodeQueryTarget(target);
+    result.target_type.query = EncodeQueryTarget(query);
   }
 
-  result.target_id = target_data.target_id();
-  if (!target_data.resume_token().empty()) {
+  result.target_id = query_data.target_id();
+  if (!query_data.resume_token().empty()) {
     result.which_resume_type = google_firestore_v1_Target_resume_token_tag;
     result.resume_type.resume_token =
-        nanopb::CopyBytesArray(target_data.resume_token().get());
+        nanopb::CopyBytesArray(query_data.resume_token().get());
   }
 
   return result;
 }
 
 google_firestore_v1_Target_DocumentsTarget Serializer::EncodeDocumentsTarget(
-    const core::Target& target) const {
+    const core::Query& query) const {
   google_firestore_v1_Target_DocumentsTarget result{};
 
   result.documents_count = 1;
   result.documents = MakeArray<pb_bytes_array_t*>(result.documents_count);
-  result.documents[0] = EncodeQueryPath(target.path());
+  result.documents[0] = EncodeQueryPath(query.path());
 
   return result;
 }
 
-Target Serializer::DecodeDocumentsTarget(
+Query Serializer::DecodeDocumentsTarget(
     nanopb::Reader* reader,
     const google_firestore_v1_Target_DocumentsTarget& proto) const {
   if (proto.documents_count != 1) {
     reader->Fail(
         StringFormat("DocumentsTarget contained other than 1 document %s",
                      proto.documents_count));
-    return {};
+    return InvalidQuery();
   }
 
   ResourcePath path = DecodeQueryPath(reader, DecodeString(proto.documents[0]));
-  return Query(std::move(path)).ToTarget();
+  return Query(std::move(path));
 }
 
 google_firestore_v1_Target_QueryTarget Serializer::EncodeQueryTarget(
-    const core::Target& target) const {
+    const core::Query& query) const {
   google_firestore_v1_Target_QueryTarget result{};
   result.which_query_type =
       google_firestore_v1_Target_QueryTarget_structured_query_tag;
@@ -926,14 +915,14 @@ google_firestore_v1_Target_QueryTarget Serializer::EncodeQueryTarget(
       result.structured_query.from[0];
 
   // Dissect the path into parent, collection_id and optional key filter.
-  const ResourcePath& path = target.path();
-  if (target.collection_group()) {
+  const ResourcePath& path = query.path();
+  if (query.collection_group()) {
     HARD_ASSERT(
         path.size() % 2 == 0,
         "Collection group queries should be within a document path or root.");
     result.parent = EncodeQueryPath(path);
 
-    from.collection_id = EncodeString(*target.collection_group());
+    from.collection_id = EncodeString(*query.collection_group());
     from.all_descendants = true;
 
   } else {
@@ -944,34 +933,34 @@ google_firestore_v1_Target_QueryTarget Serializer::EncodeQueryTarget(
   }
 
   // Encode the filters.
-  const auto& filters = target.filters();
+  const auto& filters = query.filters();
   if (!filters.empty()) {
     result.structured_query.where = EncodeFilters(filters);
   }
 
-  const auto& orders = target.order_bys();
+  const auto& orders = query.order_bys();
   if (!orders.empty()) {
     result.structured_query.order_by_count = CheckedSize(orders.size());
     result.structured_query.order_by = EncodeOrderBys(orders);
   }
 
-  if (target.limit() != Target::kNoLimit) {
+  if (query.limit() != Query::kNoLimit) {
     result.structured_query.has_limit = true;
-    result.structured_query.limit.value = target.limit();
+    result.structured_query.limit.value = query.limit();
   }
 
-  if (target.start_at()) {
-    result.structured_query.start_at = EncodeBound(*target.start_at());
+  if (query.start_at()) {
+    result.structured_query.start_at = EncodeBound(*query.start_at());
   }
 
-  if (target.end_at()) {
-    result.structured_query.end_at = EncodeBound(*target.end_at());
+  if (query.end_at()) {
+    result.structured_query.end_at = EncodeBound(*query.end_at());
   }
 
   return result;
 }
 
-Target Serializer::DecodeQueryTarget(
+Query Serializer::DecodeQueryTarget(
     nanopb::Reader* reader,
     const google_firestore_v1_Target_QueryTarget& proto) const {
   // The QueryTarget oneof only has a single valid value.
@@ -979,7 +968,7 @@ Target Serializer::DecodeQueryTarget(
       google_firestore_v1_Target_QueryTarget_structured_query_tag) {
     reader->Fail(
         StringFormat("Unknown query_type: %s", proto.which_query_type));
-    return {};
+    return InvalidQuery();
   }
 
   ResourcePath path = DecodeQueryPath(reader, DecodeString(proto.parent));
@@ -992,7 +981,7 @@ Target Serializer::DecodeQueryTarget(
       reader->Fail(
           "StructuredQuery.from with more than one collection is not "
           "supported.");
-      return {};
+      return InvalidQuery();
     }
 
     google_firestore_v1_StructuredQuery_CollectionSelector& from =
@@ -1015,7 +1004,7 @@ Target Serializer::DecodeQueryTarget(
     order_by = DecodeOrderBys(reader, query.order_by, query.order_by_count);
   }
 
-  int32_t limit = Target::kNoLimit;
+  int32_t limit = Query::kNoLimit;
   if (query.has_limit) {
     limit = query.limit.value;
   }
@@ -1032,8 +1021,7 @@ Target Serializer::DecodeQueryTarget(
 
   return Query(std::move(path), std::move(collection_group),
                std::move(filter_by), std::move(order_by), limit,
-               LimitType::First, std::move(start_at), std::move(end_at))
-      .ToTarget();
+               std::move(start_at), std::move(end_at));
 }
 
 google_firestore_v1_StructuredQuery_Filter Serializer::EncodeFilters(
@@ -1513,9 +1501,9 @@ MutationResult Serializer::DecodeMutationResult(
 }
 
 std::vector<google_firestore_v1_ListenRequest_LabelsEntry>
-Serializer::EncodeListenRequestLabels(const TargetData& target_data) const {
+Serializer::EncodeListenRequestLabels(const QueryData& query_data) const {
   std::vector<google_firestore_v1_ListenRequest_LabelsEntry> result;
-  auto value = EncodeLabel(target_data.purpose());
+  auto value = EncodeLabel(query_data.purpose());
   if (value.empty()) {
     return result;
   }

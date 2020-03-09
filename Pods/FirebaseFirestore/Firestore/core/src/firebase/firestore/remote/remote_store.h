@@ -147,19 +147,10 @@ class RemoteStore : public TargetMetadataProvider,
    */
   void HandleCredentialChange();
 
-  /**
-   * Listens to the target identified by the given `TargetData`.
-   *
-   * It is a no-op if the target of the given target data is already being
-   * listened to.
-   */
-  void Listen(const local::TargetData& target_data);
+  /** Listens to the target identified by the given `QueryData`. */
+  void Listen(const local::QueryData& query_data);
 
-  /**
-   * Stops listening to the target with the given target ID.
-   *
-   * It is an error if the given target id is not being listened to.
-   */
+  /** Stops listening to the target with the given target ID. */
   void StopListening(model::TargetId target_id);
 
   /**
@@ -185,7 +176,7 @@ class RemoteStore : public TargetMetadataProvider,
 
   model::DocumentKeySet GetRemoteKeysForTarget(
       model::TargetId target_id) const override;
-  absl::optional<local::TargetData> GetTargetDataForTarget(
+  absl::optional<local::QueryData> GetQueryDataForTarget(
       model::TargetId target_id) const override;
 
   void OnWatchStreamOpen() override;
@@ -204,7 +195,7 @@ class RemoteStore : public TargetMetadataProvider,
  private:
   void DisableNetworkInternal();
 
-  void SendWatchRequest(const local::TargetData& target_data);
+  void SendWatchRequest(const local::QueryData& query_data);
   void SendUnwatchRequest(model::TargetId target_id);
 
   /**
@@ -263,7 +254,7 @@ class RemoteStore : public TargetMetadataProvider,
    * to the server. The targets removed with unlistens are removed eagerly
    * without waiting for confirmation from the listen stream.
    */
-  std::unordered_map<model::TargetId, local::TargetData> listen_targets_;
+  std::unordered_map<model::TargetId, local::QueryData> listen_targets_;
 
   OnlineStateTracker online_state_tracker_;
 

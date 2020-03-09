@@ -17,6 +17,10 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_NANOPB_BYTE_STRING_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_NANOPB_BYTE_STRING_H_
 
+#if __OBJC__
+#import <Foundation/Foundation.h>
+#endif
+
 #include <pb.h>
 
 #include <cstdint>
@@ -76,8 +80,10 @@ class ByteString : public util::Comparable<ByteString> {
 
   ~ByteString();
 
-  ByteString& operator=(const ByteString& other);
-  ByteString& operator=(ByteString&& other) noexcept;
+  ByteString& operator=(ByteString other) {
+    swap(*this, other);
+    return *this;
+  }
 
   friend void swap(ByteString& lhs, ByteString& rhs) noexcept;
 
@@ -146,7 +152,7 @@ class ByteString : public util::Comparable<ByteString> {
   std::string ToString() const;
   friend std::ostream& operator<<(std::ostream& out, const ByteString& str);
 
-  // Represents the value as hexadecimal values.
+  // Represents the value as hexademical values.
   std::string ToHexString() const;
 
  private:
