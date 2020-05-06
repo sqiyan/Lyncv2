@@ -16,12 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+    func application(_ application: UIApplication,
+      didFinishLaunchingWithOptions launchOptions:
         [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Use Firebase library to configure APIs
-        FirebaseApp.configure()
-        // Override point for customization after application launch.
-        return true
+      FirebaseApp.configure()
+      return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		266708B523F14E4300333877 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 266708B423F14E4300333877 /* Comfortaa-Light.ttf */; };
-		26D3296424037FB2000FCF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D3296324037FB1000FCF3F /* GoogleService-Info.plist */; };
-		26D3296524037FB2000FCF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D3296324037FB1000FCF3F /* GoogleService-Info.plist */; };
-		26D3296624037FB2000FCF3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D3296324037FB1000FCF3F /* GoogleService-Info.plist */; };
+		2681BA7624601AFC00E4077B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2681BA7524601AFC00E4077B /* GoogleService-Info.plist */; };
+		2681BA7724601AFC00E4077B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2681BA7524601AFC00E4077B /* GoogleService-Info.plist */; };
+		2681BA7824601AFC00E4077B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2681BA7524601AFC00E4077B /* GoogleService-Info.plist */; };
+		2681BA7A24601F8200E4077B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681BA7924601F8200E4077B /* RegistrationViewController.swift */; };
+		2681BA7B24601F8200E4077B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681BA7924601F8200E4077B /* RegistrationViewController.swift */; };
+		2681BA7C24601F8200E4077B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681BA7924601F8200E4077B /* RegistrationViewController.swift */; };
 		26E7598423BF223100A3E7F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7598323BF223100A3E7F5 /* AppDelegate.swift */; };
 		26E7598623BF223100A3E7F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E7598523BF223100A3E7F5 /* ViewController.swift */; };
 		26E7598923BF223100A3E7F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E7598723BF223100A3E7F5 /* Main.storyboard */; };
@@ -49,7 +52,8 @@
 /* Begin PBXFileReference section */
 		0F692F84B1975E7DD3849613 /* Pods-Lyncv2-Lyncv2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyncv2-Lyncv2UITests.release.xcconfig"; path = "Target Support Files/Pods-Lyncv2-Lyncv2UITests/Pods-Lyncv2-Lyncv2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		266708B423F14E4300333877 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
-		26D3296324037FB1000FCF3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2681BA7524601AFC00E4077B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2681BA7924601F8200E4077B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		26E7598023BF223100A3E7F5 /* Lyncv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyncv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E7598323BF223100A3E7F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E7598523BF223100A3E7F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +154,6 @@
 		26E7598223BF223100A3E7F5 /* Lyncv2 */ = {
 			isa = PBXGroup;
 			children = (
-				26D3296324037FB1000FCF3F /* GoogleService-Info.plist */,
 				266708B123F14D5D00333877 /* Fonts */,
 				26E7598323BF223100A3E7F5 /* AppDelegate.swift */,
 				26E7598523BF223100A3E7F5 /* ViewController.swift */,
@@ -159,10 +162,12 @@
 				26E8C30E23F1990700F8126A /* Games.storyboard */,
 				26E8C31023F1991F00F8126A /* Matches.storyboard */,
 				26E7598723BF223100A3E7F5 /* Main.storyboard */,
+				2681BA7924601F8200E4077B /* RegistrationViewController.swift */,
 				26E8C31223F199BC00F8126A /* Profile.storyboard */,
 				26E8C31623F1A5E500F8126A /* ProfileViewController.swift */,
 				26E7598A23BF223200A3E7F5 /* Assets.xcassets */,
 				26E7598C23BF223200A3E7F5 /* LaunchScreen.storyboard */,
+				2681BA7524601AFC00E4077B /* GoogleService-Info.plist */,
 				26E7598F23BF223200A3E7F5 /* Info.plist */,
 			);
 			path = Lyncv2;
@@ -310,11 +315,11 @@
 			files = (
 				26E8C30F23F1990700F8126A /* Games.storyboard in Resources */,
 				266708B523F14E4300333877 /* Comfortaa-Light.ttf in Resources */,
+				2681BA7624601AFC00E4077B /* GoogleService-Info.plist in Resources */,
 				26E8C31323F199BC00F8126A /* Profile.storyboard in Resources */,
 				26E7598E23BF223200A3E7F5 /* LaunchScreen.storyboard in Resources */,
 				26E7598B23BF223200A3E7F5 /* Assets.xcassets in Resources */,
 				26E8C30D23F198D600F8126A /* PersonalityTestStoryboard.storyboard in Resources */,
-				26D3296424037FB2000FCF3F /* GoogleService-Info.plist in Resources */,
 				26E7598923BF223100A3E7F5 /* Main.storyboard in Resources */,
 				26E8C31123F1991F00F8126A /* Matches.storyboard in Resources */,
 			);
@@ -324,7 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26D3296524037FB2000FCF3F /* GoogleService-Info.plist in Resources */,
+				2681BA7724601AFC00E4077B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26D3296624037FB2000FCF3F /* GoogleService-Info.plist in Resources */,
+				2681BA7824601AFC00E4077B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +455,7 @@
 				26E7598423BF223100A3E7F5 /* AppDelegate.swift in Sources */,
 				26E8C31723F1A5E500F8126A /* ProfileViewController.swift in Sources */,
 				26E8C30B23F1706C00F8126A /* HomePageViewController.swift in Sources */,
+				2681BA7A24601F8200E4077B /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2681BA7B24601F8200E4077B /* RegistrationViewController.swift in Sources */,
 				26E7599923BF223200A3E7F5 /* Lyncv2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2681BA7C24601F8200E4077B /* RegistrationViewController.swift in Sources */,
 				26E759A423BF223200A3E7F5 /* Lyncv2UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,13 +634,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8G53CM2KCR;
+				DEVELOPMENT_TEAM = MFU5557K9U;
 				INFOPLIST_FILE = Lyncv2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sqiyan.Lyncv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,13 +653,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8G53CM2KCR;
+				DEVELOPMENT_TEAM = MFU5557K9U;
 				INFOPLIST_FILE = Lyncv2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sqiyan.Lyncv2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sqiyan.Lyncv2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

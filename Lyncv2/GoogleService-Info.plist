@@ -19,17 +19,17 @@
 	<key>STORAGE_BUCKET</key>
 	<string>lync-quiz.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<true/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:979142733096:ios:c83ebba6881bf2477ff41d</string>
+	<string>1:979142733096:ios:b95d7044eb7300927ff41d</string>
 	<key>DATABASE_URL</key>
 	<string>https://lync-quiz.firebaseio.com</string>
 </dict>
