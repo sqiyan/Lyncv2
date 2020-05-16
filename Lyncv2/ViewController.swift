@@ -43,6 +43,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     @IBOutlet weak var LoginButton: UIButton!
     
     @IBAction func LoginButton(_ sender: Any) {
