@@ -349,6 +349,7 @@
                         <outlet property="passwordTextField" destination="5mf-vo-8bm" id="lI1-3s-GGa"/>
                         <outlet property="signUpButton" destination="d5T-5B-tR4" id="mwp-f7-uup"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="backtologin" id="FxK-Kz-rHV"/>
+                        <segue destination="bUx-Sd-NoL" kind="show" identifier="signupcomplete" id="uTI-vN-jeP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vq1-9k-CHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -358,7 +359,7 @@
         <!--Post Registration View Controller-->
         <scene sceneID="JiI-Vg-n4j">
             <objects>
-                <viewController id="bUx-Sd-NoL" customClass="PostRegistrationViewController" customModule="Lyncv2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="bUx-Sd-NoL" customClass="PostRegistrationViewController" customModule="Lyncv2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehJ-6T-dzF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,10 +386,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2c-bK-5cU">
+                                <rect key="frame" x="75" y="617" width="265" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="pink"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Personality Test">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please help us to understand you better :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCS-Gg-rLT">
+                                <rect key="frame" x="47" y="573" width="323" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LYNC uses a unique algorithim which calculates compabilitity...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9F-BD-z4T">
+                                <rect key="frame" x="28" y="381" width="366" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="P4Y-ZS-4u0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fdV-vH-7ma"/>
+                    <connections>
+                        <segue destination="epP-FY-FHM" kind="show" identifier="personalitytest" id="c0U-ZL-x7u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgy-eo-aGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -397,7 +425,9 @@
         <!--PersonalityTestStoryboard-->
         <scene sceneID="CCS-1x-vv6">
             <objects>
-                <viewControllerPlaceholder storyboardName="PersonalityTestStoryboard" id="epP-FY-FHM" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PersonalityTestStoryboard" id="epP-FY-FHM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EgB-J1-wqn"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8Y-R7-9en" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2822" y="476"/>

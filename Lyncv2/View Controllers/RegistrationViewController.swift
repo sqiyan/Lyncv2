@@ -115,6 +115,7 @@ class RegistrationViewController: UIViewController
                     } //1-c
                     
                   // self.transitionToHome()
+                    self.performSegue(withIdentifier: "signupcomplete", sender: self)
 
                 }//2-c
             }//3-c
