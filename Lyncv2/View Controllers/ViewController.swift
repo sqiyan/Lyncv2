@@ -50,14 +50,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var LoginButton: UIButton!
     
-    @IBAction func LoginButton(_ sender: Any) {
+
+    @IBAction func SignUpTapped(_ sender: Any) {
+        
         performSegue(withIdentifier: "homepage", sender: self)
+        
     }
-    
     
     @IBOutlet weak var RegisterButton: UIButton!
     
-    @IBAction func RegisterButton(_ sender: Any) {
+  
+    @IBAction func RegisterTapped(_ sender: Any) {
         performSegue(withIdentifier: "registerpage", sender: self)
     }
     

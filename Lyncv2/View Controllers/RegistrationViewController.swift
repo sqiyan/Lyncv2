@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 import Firebase
 
 class RegistrationViewController: UIViewController
@@ -23,6 +22,13 @@ class RegistrationViewController: UIViewController
 
     @IBOutlet weak var passwordTextField: UITextField!
 
+    
+    @IBAction func BacktoHomepage(_ sender: Any) {
+        
+        performSegue(withIdentifier: "backtologin", sender: self)
+        
+    }
+    
     @IBOutlet weak var signUpButton: UIButton!
 //
     
